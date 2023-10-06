@@ -51,6 +51,8 @@ def process_one_image(args,
     elif isinstance(img, np.ndarray):
         img = mmcv.bgr2rgb(img)
 
+    img = img * 0
+                          
     if visualizer is not None:
         visualizer.add_datasample(
             'result',
